@@ -33,3 +33,116 @@ figure {
     height: 100%;
     border: 0;
 }
+
+/* NYC Landmarks - Page Styles */
+
+/* Header */
+header {
+    border-bottom: 2px solid var(--action);
+}
+
+.site-title {
+    font-family: var(--headings-family);
+    font-weight: bold;
+    color: var(--action);
+}
+
+/* Introduction */
+.introduction {
+    padding: var(--section-spacing) var(--content-padding);
+    text-align: center;
+}
+
+.introduction h1 {
+    color: var(--action);
+}
+
+.introduction .intro {
+    font-size: var(--text-size-lg);
+    font-weight: bold;
+}
+
+/* Featured Landmark */
+.featured-landmark {
+    background-color: var(--alternate-background);
+    color: var(--alternate-text);
+    padding: var(--space-8);
+    border-radius: var(--space-2);
+}
+
+.featured-landmark img {
+    display: block;
+    width: 100%;
+    border-radius: var(--space-1);
+    margin-bottom: var(--space-4);
+}
+
+/* Landmark Gallery */
+.landmarks {
+    margin-top: var(--section-spacing);
+}
+
+.landmarks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: var(--grid-gap);
+}
+
+/* Individual Cards */
+.landmark {
+    background-color: #FFFFFF;
+    border: 1px solid var(--alternate-action-hover);
+    border-radius: var(--space-2);
+    overflow: hidden;
+    padding: var(--content-padding);
+}
+
+.landmark img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--space-1);
+}
+
+.landmark h3 {
+    margin-top: var(--space-3);
+    color: var(--primary-text);
+}
+
+.text-caption {
+    font-size: var(--text-size-sm);
+    margin-top: var(--space-1);
+}
+
+/* Intro Video */
+.intro-video {
+    margin-top: var(--section-spacing);
+    padding: var(--content-padding);
+}
+
+.intro-video h2 {
+    color: var(--action);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    border-top: 2px solid var(--action);
+    font-size: var(--text-size-sm);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    header, main, footer {
+        padding: var(--content-padding);
+    }
+
+    .introduction {
+        padding: var(--space-8) var(--content-padding);
+    }
+
+    .featured-landmark {
+        padding: var(--content-padding);
+    }
+}
