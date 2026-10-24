@@ -1,8 +1,16 @@
-
 /* basic responsive image css */
-img, video{
-  max-width: 100%;
-  height: auto;
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.videoWrapper.ratio-4-3 {
+    padding-bottom: 75%;
+}
+
+.videoWrapper.ratio-9-16 {
+    padding-bottom: 177.78%;
 }
 
 .landmarks-grid {
@@ -134,7 +142,10 @@ footer {
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {
-    header, main, footer {
+
+    header,
+    main,
+    footer {
         padding: var(--content-padding);
     }
 
