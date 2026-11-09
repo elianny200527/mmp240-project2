@@ -252,3 +252,212 @@ header {
 .featured-landmark img {
     margin-bottom: var(--space-6);
 }
+
+/* =========================================
+   PROJECT 3 - RESPONSIVE STYLES
+   Mobile First Design
+========================================= */
+
+/* Mobile Layout */
+
+header,
+main,
+footer {
+    width: 100%;
+    padding-left: var(--content-padding);
+    padding-right: var(--content-padding);
+}
+
+/* Main Navigation */
+
+header nav {
+    margin-top: var(--space-2);
+}
+
+header nav a {
+    display: inline-block;
+    font-weight: bold;
+    padding: var(--space-1) var(--space-2);
+}
+
+/* Homepage Gallery */
+
+.landmarks-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap);
+}
+
+/* Featured Landmark */
+
+.featured-landmark {
+    padding: var(--content-padding);
+}
+
+.featured-landmark picture img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+}
+
+/* Wonder Wheel Page */
+
+.landmark-page {
+    max-width: var(--page-width);
+}
+
+.landmark-introduction {
+    text-align: center;
+}
+
+.landmark-introduction h1 {
+    color: var(--action);
+}
+
+.tagline {
+    font-size: var(--text-size-lg);
+    font-weight: bold;
+}
+
+.landmark-hero {
+    margin-top: var(--space-6);
+}
+
+.landmark-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--space-2);
+}
+
+.landmark-about,
+.landmark-directions,
+.landmark-more-info {
+    padding: var(--content-padding);
+}
+
+.landmark-about h2,
+.landmark-directions h2,
+.landmark-more-info h2,
+.landmark-gallery h2 {
+    color: var(--action);
+}
+
+.directions-links {
+    padding-left: var(--space-4);
+}
+
+.directions-links li {
+    margin-bottom: var(--space-2);
+}
+
+/* Wonder Wheel Image Gallery */
+
+.landmark-gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap);
+}
+
+.landmark-gallery-grid figure {
+    background-color: #FFFFFF;
+    border: 1px solid var(--alternate-action-hover);
+    padding: var(--content-padding);
+    border-radius: var(--space-2);
+}
+
+.landmark-gallery-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--space-1);
+}
+
+/* Previous / Next Navigation */
+
+#pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-top: var(--section-spacing);
+}
+
+#pagination .btn {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--action);
+    color: var(--button-text);
+    text-decoration: none;
+    border-radius: var(--space-1);
+}
+
+#pagination .btn:hover {
+    background-color: var(--action-hover);
+}
+
+/* =========================================
+   TABLET - 645px and wider
+========================================= */
+
+@media (min-width: 645px) {
+
+    .landmarks-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .landmark-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featured-landmark {
+        padding: var(--space-6);
+    }
+
+    .landmark-hero img {
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+}
+
+/* =========================================
+   DESKTOP - 1024px and wider
+========================================= */
+
+@media (min-width: 1024px) {
+
+    header,
+    main,
+    footer {
+        padding-left: var(--space-8);
+        padding-right: var(--space-8);
+    }
+
+    .landmarks-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .landmark-gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .landmark-introduction {
+        max-width: 900px;
+        margin-inline: auto;
+    }
+
+    .landmark-hero img {
+        max-height: 600px;
+    }
+
+    .landmark-about,
+    .landmark-directions,
+    .landmark-more-info {
+        max-width: 900px;
+        margin-inline: auto;
+    }
+
+}
