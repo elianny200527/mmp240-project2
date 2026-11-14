@@ -12,145 +12,154 @@
 <body>
     <header>
         <div class="site-title">NYC Landmarks</div>
+        <nav class="site-navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="landmark-liberty.html">Statue of Liberty</a></li>
+                <li><a href="landmark-empire.html">Empire State Building</a></li>
+                <li><a href="landmark-ferry.html">Staten Island Ferry</a></li>
+                <li><a href="landmark-wonder.html" aria-current="page">Wonder Wheel</a></li>
+                <li><a href="landmark-yankee.html">Yankee Stadium</a></li>
+                <li><a href="landmark-tram.html">Roosevelt Island Tramway</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section class="introduction">
-            <h1>NYC Landmarks Virtual Tour</h1>
+    <main class="landmark-page">
 
-            <p class="intro">
-                This site highlights some interesting landmarks across New York City's five boroughs.
+        <section class="landmark-introduction">
+            <h1>Wonder Wheel</h1>
+            <p class="tagline">
+                A century-old Ferris wheel that still lights up the Coney Island skyline.
+            </p>
+            <p>
+                Rising above the boardwalk since 1920, the Wonder Wheel is one of
+                New York City's most beloved seaside icons. A ride in one of its
+                cars offers 15-story-high views of the Atlantic and the vibrant
+                energy of Coney Island.
             </p>
 
+            <figure class="landmark-hero">
+                <img src="images/pexels-kelsey-caroline-774981359-19122990.jpg"
+                     alt="Wonder Wheel entrance on a cloudless sunny day">
+                <figcaption class="text-caption">
+                    <a href="https://www.pexels.com/photo/ferris-wheel-in-amusement-park-19122990/">
+                        Photo by Kelsey Caroline
+                    </a>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="landmark-about">
+            <h2>About</h2>
             <p>
-                New York City is filled with landmarks, tourist attractions and historic sites dating from before it was
-                known as New York City to more recent additions. Click through this site to explore!
+                <strong>Built:</strong> The Wonder Wheel was built in 1920 by the
+                Eccentric Ferris Wheel Company and has operated continuously
+                ever since. It became a New York City Landmark in 1989 and is
+                still family-run by the Vourderis family as part of Deno's
+                Wonder Wheel Amusement Park.
+            </p>
+            <p>
+                <strong>Today:</strong> It remains a centerpiece of
+                <a href="https://www.denoswonderwheel.com/"
+                   target="_blank" rel="noopener">
+                    Deno's Wonder Wheel Amusement Park
+                </a>,
+                open seasonally from spring through fall. It features
+                24 passenger cars—some fixed, some sliding—and provides
+                views of the ocean, beach, and surrounding amusement district.
             </p>
         </section>
 
-        <div class="videoWrapper ratio-16-9">
-            <iframe src="https://www.youtube.com/embed/_xkg7pNSp9M" title="NYC Landmarks Video" allowfullscreen>
-            </iframe>
-        </div>
-
-        <section class="featured-landmark">
-            <h2>Featured Landmark: Empire State Building</h2>
-
-            <picture>
-                <source media="(min-width: 645px)" srcset="images/pexels-tracehudson-2424391.jpg">
-
-                <source media="(max-width: 644px)" srcset="images/square/pexels-tracehudson-2424391.jpg">
-
-                <img src="images/pexels-tracehudson-2424391.jpg"
-                    alt="Empire State Building with lower Manhattan in the background">
-            </picture>
-
+        <section class="landmark-directions">
+            <h2 id="directions-title">Directions</h2>
             <p>
-                The Empire State Building is one of New York City's
-                most famous landmarks. Located in Manhattan, it
-                opened in 1931 and stands 1,454 feet tall,
-                including its antenna.
+                Go to Deno's Wonder Wheel Amusement Park at
+                3059 West 12th Street, Brooklyn, near the Coney Island Boardwalk.
             </p>
-
-            <p>
-                Visitors can enjoy beautiful views of New York City
-                from its observation decks. The building is famous
-                for its Art Deco architecture and the colorful
-                lights that illuminate the skyline at night.
-            </p>
+            <ul class="directions-links">
+                <li>
+                    <a class="directions-link"
+                       href="https://www.google.com/maps/dir/?api=1&amp;destination=Deno%27s%20Wonder%20Wheel%20Amusement%20Park%2C%203059%20West%2012th%20Street%2C%20Brooklyn%2C%20NY%2011224">
+                        Get directions in Google Maps
+                    </a>
+                </li>
+                <li>
+                    <a class="directions-link"
+                       href="https://maps.apple.com/directions?destination=Deno%27s%20Wonder%20Wheel%20Amusement%20Park%2C%203059%20West%2012th%20Street%2C%20Brooklyn%2C%20NY%2011224">
+                        Get directions in Apple Maps
+                    </a>
+                </li>
+            </ul>
         </section>
 
-        <!-- NYC Landmarks Gallery -->
-        <div class="landmarks landmarks-grid">
+        <section class="landmark-more-info">
+            <h2>More Info</h2>
+            <ul>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/Wonder_Wheel"
+                       target="_blank" rel="noopener">
+                        Wikipedia: Wonder Wheel
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.nycgovparks.org/parks/coney-island-beach-and-boardwalk/history"
+                       target="_blank" rel="noopener">
+                        NYC Parks – Coney Island
+                    </a>
+                </li>
+            </ul>
+        </section>
 
-            <div class="landmark">
+        <section class="landmark-gallery">
+            <h2>Wonder Wheel Gallery</h2>
+            <div class="landmark-gallery-grid">
                 <figure>
-                    <img src="images/square/pexels-mora-versio-2150673251-34091093.jpg"
-                        alt="Statue of Liberty from below looking up at it">
+                    <img src="images/square/pexels-kyle-miller-169884138-27462439_sq.jpg"
+                         alt="A man walking away from the Wonder Wheel which is in full view.">
                     <figcaption class="text-caption">
-                        <a href="https://www.pexels.com/photo/statue-of-liberty-in-new-york-city-usa-34091093/">
-                            Photo by Mora Versio
+                        <a href="https://www.pexels.com/photo/a-man-walking-past-a-ferris-wheel-27462439/">
+                            Photo by Kyle Miller
                         </a>
                     </figcaption>
                 </figure>
-                <h3>Statue of Liberty</h3>
-            </div>
 
-            <div class="landmark">
                 <figure>
-                    <img src="images/square/pexels-tracehudson-2424391.jpg"
-                        alt="Empire State Building with lower Manhattan in the background">
+                    <img src="images/square/pexels-clement-proust-363898785-24730360_sq.jpg"
+                         alt="Wonder Wheel at sunset">
                     <figcaption class="text-caption">
-                        <a href="https://www.pexels.com/photo/empire-state-building-2424391/">
-                            Photo by Trace Hudson
+                        <a href="https://www.pexels.com/photo/denos-wonder-wheel-amusement-park-24730360/">
+                            Photo by Clément Proust
                         </a>
                     </figcaption>
                 </figure>
-                <h3>Empire State Building</h3>
-            </div>
 
-            <div class="landmark">
                 <figure>
-                    <img src="images/square/praswin-prakashan-YOCN1a1m_dg-unsplash.jpg"
-                        alt="Staten Island Ferry pulling into the dock">
+                    <img src="images/square/pexels-dimitry-mak-1310041547-30911091_sq.jpg"
+                         alt="Night view of the Wonder Wheel lit with neon">
                     <figcaption class="text-caption">
-                        <a href="https://unsplash.com/photos/a-large-ferry-boat-in-a-body-of-water-YOCN1a1m_dg">
-                            Photo by Praswin Prakashan
+                        <a href="https://www.pexels.com/photo/colorful-summer-day-at-coney-island-amusement-park-30911091/">
+                            Photo by Dimitry Mak
                         </a>
                     </figcaption>
                 </figure>
-                <h3>Staten Island Ferry</h3>
             </div>
+        </section>
 
-            <div class="landmark">
-                <figure>
-                    <img src="images/square/pexels-kelsey-caroline-774981359-19122990.jpg"
-                        alt="Wonder Wheel ferris wheel at Coney Island">
-                    <figcaption class="text-caption">
-                        <a href="https://www.pexels.com/photo/ferris-wheel-in-amusement-park-19122990/">
-                            Photo by Kelsey Caroline
-                        </a>
-                    </figcaption>
-                </figure>
-                <h3>Wonder Wheel ferris wheel at Coney Island</h3>
-            </div>
-
-            <div class="landmark">
-                <figure>
-                    <img src="images/square/pexels-malcolmhill-12360516.jpg"
-                        alt="Yankee Stadium seen from the water with stadium title visible.">
-                    <figcaption class="text-caption">
-                        <a href="https://www.pexels.com/photo/yankee-stadium-under-the-blue-sky-12360516/">
-                            Photo by Malcolm Hill
-                        </a>
-                    </figcaption>
-                </figure>
-                <h3>Yankee Stadium</h3>
-            </div>
-
-            <div class="landmark">
-                <figure>
-                    <img src="images/square/pexels-loquellano-12404963.jpg"
-                        alt="Roosevelt Island Tramway leaving Manhattan">
-                    <figcaption class="text-caption">
-                        <a href="https://www.pexels.com/photo/cable-car-above-city-street-12404963/">
-                            Photo by Raphael Loquellano
-                        </a>
-                    </figcaption>
-                </figure>
-                <h3>Roosevelt Island Tramway</h3>
-            </div>
-
-        </div>
-
-
+        <nav id="pagination" aria-label="Landmark navigation">
+            <a class="btn" rel="prev" href="landmark-tram.html">
+                ← Previous
+            </a>
+            <a class="btn" rel="next" href="landmark-liberty.html">
+                Next →
+            </a>
+        </nav>
 
     </main>
 
     <footer>
         <p>Site by Elianny Mosquea</p>
     </footer>
-
 </body>
 
 </html>
