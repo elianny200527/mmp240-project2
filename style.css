@@ -356,6 +356,10 @@ header nav a {
     margin-top: var(--space-6);
 }
 
+.landmark-hero picture {
+    display: block;
+}
+
 .landmark-hero img {
     display: block;
     width: 100%;
