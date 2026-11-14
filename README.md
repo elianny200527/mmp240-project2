@@ -1,8 +1,8 @@
-# NYC Landmarks
+# NYC Landmarks — Project 3
 
 ## Project Overview
 
-NYC Landmarks is a responsive website that helps visitors explore six famous landmarks in New York City. It features a clean and modern design with green and cream colors, Montserrat and Open Sans fonts, and organized layouts. The website helps tourists and local visitors discover landmarks and find useful information when planning their visits. It will include individual landmark pages and easy navigation for both mobile and desktop users.
+NYC Landmarks is a responsive seven-page website that helps visitors explore six famous New York City landmarks. Its green-and-cream palette, Montserrat headings, Open Sans body text, and flexible layouts support visitors using phones, tablets, and desktop screens. The home page links to six landmark detail pages with history, visitor information, photo credits, and directions.
 
 ## Target Audience
 
@@ -32,40 +32,48 @@ A responsive NYC landmarks website with **seven pages total**:
 
 The site architecture is defined in the `site-map.md` file.
 
-Reuse a consistent header, navigation, and footer across all pages. Link the home-page landmark cards to their detail pages and add Previous/Next links through the six landmarks. Combine fluid layouts and flexible media with media queries so the site works on small and large screens. Continue using the visual direction and styles documented in `design.md`.
+Reuse a consistent header, responsive seven-link navigation, and footer across all pages. The homepage landmark cards link to their detail pages, and Previous/Next links follow the six-landmark loop. Fluid layouts, flexible media, art-directed hero images, and media queries support mobile, tablet, and desktop screens. The current visual system is documented in `design.md`.
 
 The site is an informational guide. Ticket booking, accounts, live transit data, and a custom trip planner are outside this project's scope; link to appropriate visitor-information sources instead.
+
+## Deployment
+
+- **GitHub Pages:** [https://elianny200527.github.io/mmp240-project2/](https://elianny200527.github.io/mmp240-project2/)
+- **Netlify:** [https://project3mmp240.netlify.app/](https://project3mmp240.netlify.app/)
+
+Both deployment URLs were reachable when this document was updated.
 
 ## Content Summary
 
 | Page | Content |
 | --- | --- |
-| Home | Introduction to NYC landmarks, embedded video, featured landmark image and text, and six credited landmark cards linking to their pages. |
+| Home | Introduction to NYC landmarks, embedded video, featured Empire State Building image and text, and six credited landmark cards linking to their pages. |
 | Statue of Liberty | Introduction, hero image, About text covering its history and present use, and More Info links including visitor information and directions. |
 | Empire State Building | Introduction, hero image, About text covering its history and present use, and More Info links including visitor information. |
 | Staten Island Ferry | Introduction, hero image, About text covering its history and present use, and More Info links including schedules and directions. |
-| Wonder Wheel | Introduction, hero image, About text covering its history and present use, and More Info links. Additional landmark images where applicable. |
+| Wonder Wheel | Introduction, hero image, About text covering its history and present use, More Info links, a gallery with three credited images, and Previous/Next links. |
 | Yankee Stadium | Introduction, hero image, About text covering its history and present use, and More Info links including the visitor reference guide. |
 | Roosevelt Island Tramway | Introduction, hero image, About text covering its history and present use, and More Info links including riding information and directions. |
 
 Preserve the landmark text, links, and photo credits.
 
+**Known image-path issue:** The Wonder Wheel gallery in `landmark-wonder.html` references three square image files that are not currently present in `images/square/`: `pexels-kyle-miller-169884138-27462439_sq.jpg`, `pexels-clement-proust-363898785-24730360_sq.jpg`, and `pexels-dimitry-mak-1310041547-30911091_sq.jpg`. The matching photos have not been found in the project assets; do not treat all image paths as verified.
+
 ## Success Criteria
 
-Use this checklist when building and reviewing the finished project.
+Use this checklist to distinguish implemented structure from checks that still need manual verification.
 
-- [ ] The home page and six landmark pages are complete and linked.
-- [ ] Fluid layouts and flexible images/video adapt to the available space.
-- [ ] Media queries produce appropriate mobile and desktop layouts; a tablet layout may be added where useful.
-- [ ] Responsive navigation provides access to Home and all six landmarks on small and large screens.
-- [ ] Every landmark page has its landmark name as the `h1`, a hero image, the landmark content and links, and working Previous/Next links.
-- [ ] All pages reuse a consistent header, navigation, and footer.
-- [ ] Typography follows a consistent hierarchy; colors and spacing make content easy to scan and agree with `design.md`.
-- [ ] HTML uses semantic elements, including `header`, `nav`, `main`, and `footer`, with logical headings and links that describe their destinations.
-- [ ] Informative images have meaningful alternative text, decorative images have empty alternative text, and text/background colors have sufficient contrast.
-- [ ] Navigation and other controls work with the keyboard and have visible focus.
-- [ ] Photo credits and source links are preserved, and internal links and file paths work on the published site.
-- [ ] The site is checked at narrow and wide widths, HTML/CSS are validated, and the final version is committed and published.
+- [x] Seven HTML pages are present: one home page and six landmark detail pages; homepage cards and landmark navigation link to the detail pages.
+- [x] Fluid image/video rules and responsive layouts are implemented in `style.css`.
+- [x] Mobile, tablet, and desktop breakpoints are implemented at 600px, 645px, and 1024px.
+- [x] All pages include the same seven-link navigation, with the current page identified using `aria-current="page"`.
+- [x] Each landmark detail page includes a page-title `h1`, hero image, landmark content, and Previous/Next navigation.
+- [x] Pages use shared `header`, `nav`, `main`, and `footer` elements and load `tokens.css` before `style.css`.
+- [x] Hero images use `<picture>` to select square mobile crops through 644px and retain the original image as the fallback.
+- [ ] Confirm every local image path works; the three Wonder Wheel gallery image files listed above are currently missing.
+- [ ] Test keyboard access, focus visibility, color contrast, and other accessibility requirements; no full accessibility audit is documented.
+- [ ] Check the rendered pages at narrow, tablet, and wide widths and validate the HTML/CSS.
+- [ ] Confirm all published internal paths and images, then commit the final project.
 
 ## Documentation
 

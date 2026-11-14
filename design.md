@@ -1,8 +1,8 @@
 ---
 version: 2
-project: 2
-name: "NYC Explorer"
-description: "This design system is for a website that helps tourists and visitors explore New York City's most iconic landmarks. I want the website to feel modern, welcoming, elegant, and easy to navigate. The design will use clean typography, balanced spacing, and a simple color palette inspired by New York City."
+project: 3
+name: "NYC Landmarks"
+description: "This design system supports the responsive NYC Landmarks Project 3 website, helping tourists and visitors explore six New York City landmarks. The design uses clean typography, balanced spacing, and a welcoming green-and-cream palette."
 tokensFile: "tokens.css"
 colors:
   defaultText: "var(--primary-text)"
@@ -61,7 +61,7 @@ layout:
 
 ## Overview
 
-This design system is for a website that helps tourists and visitors explore New York City's most iconic landmarks. I want the website to feel modern, welcoming, elegant, and easy to navigate. The design will use clean typography, balanced spacing, and a simple color palette inspired by New York City.
+This design system is for NYC Landmarks Project 3, a responsive website with one home page and six landmark detail pages. The visual system uses a green-and-cream palette, Montserrat headings, Open Sans body text, and token-based spacing.
 
 This guide describes the choices in tokens.css. Use the CSS variables above rather than copying their values. Keep design.md and tokens.css in your project folder, and link tokens.css before your own stylesheet on every page. Add page-specific styling in your own stylesheet.
 
@@ -69,7 +69,9 @@ This guide describes the choices in tokens.css. Use the CSS variables above rath
 
 Use `var(--primary-text)` on `var(--primary-background)` for the default palette. Add the alternate class to use `var(--alternate-text)` on `var(--alternate-background)`.
 
-Default links and button backgrounds use `var(--action)` and `var(--action-hover)`; button text uses `var(--button-text)`. In alternate areas, use `var(--alternate-action)`, `var(--alternate-action-hover)`, and `var(--alternate-button-text)`. Keep links underlined.
+The token values are `--primary-text: #24352D`, `--primary-background: #F8F7F1`, `--action: #38594A`, `--action-hover: #243F32`, and `--button-text: #FFFFFF`. Alternate colors are `--alternate-text: #F8F7F1`, `--alternate-background: #38594A`, `--alternate-action: #FFFFFF`, `--alternate-action-hover: #DDEBDD`, and `--alternate-button-text: #38594A`. Gallery cards use white surfaces in `style.css`.
+
+Default links are underlined. The primary navigation, pagination buttons, and landmark-card title links intentionally remove underlines and use other visual styling; the current navigation item uses `aria-current="page"`.
 
 ### Contrast targets
 
@@ -86,11 +88,13 @@ Aim for WCAG AAA contrast for normal text; WCAG AA is the minimum. Check these t
 - `var(--alternate-button-text)` on `var(--alternate-action)`
 - `var(--alternate-button-text)` on `var(--alternate-action-hover)`
 
+These are contrast targets, not documented test results. No complete contrast or accessibility audit is claimed here.
+
 ## Typography
 
-Use `var(--base-family)` for body text and `var(--headings-family)` for headings. Body text uses `var(--text-size-md)`, small text uses `var(--text-size-sm)`, and each heading uses its selected variable in headingSizes above.
+Use `var(--base-family)` (Open Sans) for body text and `var(--headings-family)` (Montserrat) for headings. Body text uses `var(--text-size-md)`, small text uses `var(--text-size-sm)`, and headings use the sizes in headingSizes above.
 
-Use `var(--line-height-base)` for body line height and `var(--line-height-headings)` for heading line height. The html rule in tokens.css sets the root size; rem-based sizes scale from it. The form's xxl and xxxl labels correspond to --text-size-2xl and --text-size-3xl.
+Use `var(--line-height-base)` for body line height and `var(--line-height-headings)` for heading line height. The html rule in tokens.css sets the root size; rem-based sizes scale from it. The 2xl and 3xl text-scale labels correspond to `--text-size-2xl` and `--text-size-3xl`.
 
 ## Spacing and layout
 
@@ -102,6 +106,21 @@ Use the spacing variables listed above. Each --space-N token is a multiplier of 
 - `var(--content-padding)`: padding inside sections, outside a nested grid.
 
 Read tokens.css to see which spacing step each layout variable uses. Text wraps within its containing element; there is no separate line-length variable.
+
+## Responsive behavior and imagery
+
+The responsive CSS is mobile-first. At 645px and wider, the homepage landmark grid and Wonder Wheel gallery change to two columns; at 1024px and wider, they change to three columns. At widths up to 600px, header, main, and footer padding is adjusted for mobile. Desktop layouts also apply wider page padding and constrain selected landmark content.
+
+Each of the six landmark detail pages uses a `<picture>` hero: the matching square image in `images/square/` is selected up to 644px, while the original full-size image remains the `<img>` fallback for larger screens. The homepage featured image also has mobile and desktop `<source>` entries. The Wonder Wheel gallery references three additional square images that are currently absent from the project folder; those paths are not verified.
+
+The primary navigation is a seven-link flexbox list that wraps on smaller screens. There is no hamburger menu or navigation JavaScript.
+
+## Deployment
+
+- GitHub Pages: [https://elianny200527.github.io/mmp240-project2/](https://elianny200527.github.io/mmp240-project2/)
+- Netlify: [https://project3mmp240.netlify.app/](https://project3mmp240.netlify.app/)
+
+Both URLs were reachable when this documentation was updated.
 
 ## Do and Don't
 
@@ -116,4 +135,4 @@ Read tokens.css to see which spacing step each layout variable uses. Text wraps 
 
 - Add one-off design values when an existing variable fits.
 - Rely on color alone to communicate meaning.
-- Change a design choice in only one exported file. Update the form and export a fresh set of files when the design changes.
+- Change a design choice in only one project file. Keep this guide and `tokens.css` in sync when the design changes.
